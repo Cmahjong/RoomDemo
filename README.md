@@ -17,3 +17,15 @@ class Book {
     @ColumnInfo(name = "user_id")
     public int userId;
 }
+
+导入
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+    kapt "android.arch.persistence.room:compiler:$room_version"
+    implementation "org.jetbrains.anko:anko:0.10.5"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:0.22.5'
+    
+    最后两个依赖是用于做kotlin协程的
+    
+    基本就是很简单的 Bean->Dao ->DataBase 就ok了
+    
