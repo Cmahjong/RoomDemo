@@ -23,7 +23,7 @@ companion object {
         if (INSTANCE == null) {
             synchronized(UserRoomDatabase::class.java) {
                 if (INSTANCE == null) {
-                    INSTANCE=Room.databaseBuilder(context,UserRoomDatabase::class.java,"user_room").build()
+                    INSTANCE=Room.databaseBuilder(context,UserRoomDatabase::class.java,"user_room").allowMainThreadQueries().build()
                 }
             }
         }
